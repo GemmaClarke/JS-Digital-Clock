@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS Digital Clock</title>
 </head>
 <body>
     
-
     <div class="clock"></div>
 
     <script>
 
         const clock = document.querySelector('.clock');
+
+        const timer = () => {
+
         let date = new Date();
+
         let hour = date.getHours();
-        let minutes = date.getminutes();
-        let seconds = date.getseconds();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
 
+        ( hour < 10 ) ? hour = `0${hour}`: hour;
+        ( minutes < 10) ? minutes = `0${minutes}` : minutes;
+        ( seconds < 10) ? seconds = `0${seconds}`: seconds;
 
-        clocktextContent =`${hour} : ${minutes} : ${seconds};
-
-        setInterval
-
+    clock.textContent = `${hour} : ${minutes} : ${seconds}`;
+    }
+                
+    setInterval( timer, 1000 );
+        
     </script>
 </body>
 </html>

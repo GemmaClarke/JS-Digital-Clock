@@ -1,0 +1,19 @@
+body{
+    font-family: 'Shippori Antique B1', sans-serif;
+    font-size: 150px;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+
+}
+
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
